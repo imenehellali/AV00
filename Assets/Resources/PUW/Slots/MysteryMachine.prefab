@@ -1096,17 +1096,16 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 880774007180850119, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: -876546973899608171, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: -3846018093981099296, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: 1840515463866009680, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: 6269253766788442338, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: -6629797300637803691, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: -3522955778539423533, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: -8274133419916619345, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: -2813467912831258332, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: 9185737683893222716, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: 6699446615349125189, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
+  - {fileID: 2100000, guid: 164e38bf9011bc447af0257af0de1095, type: 2}
+  - {fileID: 2100000, guid: f9650c7a29c6b9a488a7b461a361d128, type: 2}
+  - {fileID: 2100000, guid: f669dc71624372e4aa34da494fc07a39, type: 2}
+  - {fileID: 2100000, guid: 58c77b31feb585042a6534c052d0b7b9, type: 2}
+  - {fileID: 2100000, guid: c5eedcf3ac4c25e439a30c7e8d9e17bb, type: 2}
+  - {fileID: 2100000, guid: 05e7c5d782f06eb49bd1484f22ee2530, type: 2}
+  - {fileID: 2100000, guid: 05e7c5d782f06eb49bd1484f22ee2530, type: 2}
+  - {fileID: 2100000, guid: 1df0a99b9d65e444193af0328144e2b5, type: 2}
+  - {fileID: 2100000, guid: 58c77b31feb585042a6534c052d0b7b9, type: 2}
+  - {fileID: 2100000, guid: 164e38bf9011bc447af0257af0de1095, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1159,10 +1158,10 @@ MonoBehaviour:
   cakePanel: {fileID: 2451662427366725374}
   nothingAnimator: {fileID: 3803267247212506683}
   audioSource: {fileID: 7738988262519093362}
-  nothingSE: {fileID: 8300000, guid: 26d4e3f53a8c3784087426f7e2c000fc, type: 3}
+  nothingSE: {fileID: 8300000, guid: eb5fc6d9119259d4fb8662b81510c4a1, type: 3}
   gewinn: {fileID: 2480520324317015628}
   buttonBlocker: {fileID: 8892680409973212471}
-  notEnoughClip: {fileID: 8300000, guid: 84c6af52c527b7d4cb450320143bee08, type: 3}
+  notEnoughClip: {fileID: 8300000, guid: 65470925291dbe641bc7bfa8006e1169, type: 3}
   notEnoughPanel: {fileID: 9032819044973052500}
 --- !u!95 &3803267247212506683
 Animator:

@@ -2908,18 +2908,16 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3016479151454471876, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: 1886820026795636259, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: 3780671244086486322, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: -5423965977658753630, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: 6897461790470923685, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: 637949407474519127, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: -4246479402191905792, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: -5605289326131794027, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: 99656467281103303, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: -7198559261415225722, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: -8693172909504858975, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
-  - {fileID: 725804396391725484, guid: 861c0a604b1f4a44a98116bff5e50da9, type: 3}
+  - {fileID: 2100000, guid: 5df16912653d35543bc3b432514d0d1a, type: 2}
+  - {fileID: 2100000, guid: 164e38bf9011bc447af0257af0de1095, type: 2}
+  - {fileID: 2100000, guid: c5eedcf3ac4c25e439a30c7e8d9e17bb, type: 2}
+  - {fileID: 2100000, guid: 58c77b31feb585042a6534c052d0b7b9, type: 2}
+  - {fileID: 2100000, guid: c5eedcf3ac4c25e439a30c7e8d9e17bb, type: 2}
+  - {fileID: 2100000, guid: 05e7c5d782f06eb49bd1484f22ee2530, type: 2}
+  - {fileID: 2100000, guid: 05e7c5d782f06eb49bd1484f22ee2530, type: 2}
+  - {fileID: 2100000, guid: 1df0a99b9d65e444193af0328144e2b5, type: 2}
+  - {fileID: 2100000, guid: 05e7c5d782f06eb49bd1484f22ee2530, type: 2}
+  - {fileID: 2100000, guid: c5eedcf3ac4c25e439a30c7e8d9e17bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2969,14 +2967,14 @@ MonoBehaviour:
   billsAnimator: {fileID: 6658674310024718320}
   buttonBlocker: {fileID: 6900737092051962767}
   gewinn: {fileID: 5806637734361610148}
-  spinSE: {fileID: 8300000, guid: c58e314a6f41b4e47b20527ce2359daa, type: 3}
-  _50WinSE: {fileID: 8300000, guid: 071659ce8e4ef6142a12e2fc1bc715c1, type: 3}
-  _10WinSE: {fileID: 8300000, guid: 071659ce8e4ef6142a12e2fc1bc715c1, type: 3}
-  _20WinSE: {fileID: 8300000, guid: 071659ce8e4ef6142a12e2fc1bc715c1, type: 3}
-  _200WinSE: {fileID: 8300000, guid: 071659ce8e4ef6142a12e2fc1bc715c1, type: 3}
-  billLoseSE: {fileID: 8300000, guid: f6287c587b539c64f9e36ff473b11c53, type: 3}
+  spinSE: {fileID: 8300000, guid: 371ddb65da7369541be430e54c77cbdf, type: 3}
+  _50WinSE: {fileID: 8300000, guid: 14d068ccb5ab2c94f9f8c27cb7890130, type: 3}
+  _10WinSE: {fileID: 8300000, guid: 14d068ccb5ab2c94f9f8c27cb7890130, type: 3}
+  _20WinSE: {fileID: 8300000, guid: 14d068ccb5ab2c94f9f8c27cb7890130, type: 3}
+  _200WinSE: {fileID: 8300000, guid: 14d068ccb5ab2c94f9f8c27cb7890130, type: 3}
+  billLoseSE: {fileID: 8300000, guid: 97ce565b74391fa42922f5e2a6251796, type: 3}
   audioSource: {fileID: 8850067057244289373}
-  notEnoughClip: {fileID: 8300000, guid: 84c6af52c527b7d4cb450320143bee08, type: 3}
+  notEnoughClip: {fileID: 8300000, guid: 65470925291dbe641bc7bfa8006e1169, type: 3}
   notEnoughPanel: {fileID: 6978411053559239975}
   OnBillsWin:
     m_PersistentCalls:
