@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 65c7cf8a38e22544182490421e932818
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AluminioBranco
+    second: {fileID: 2100000, guid: 1d9a8db20b0e0bd4bb87ef4e0ed5ad50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AluminioBranco.Inf
+    second: {fileID: 2100000, guid: 678d5c1080433c24fa95010c60cc5dea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AluminioBrancoFront
+    second: {fileID: 2100000, guid: 3f38b9e8d9ad06f40b93b4c262fe5467, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AluminioHeinekenTop
+    second: {fileID: 2100000, guid: 6c67848f7fa642d42b0d50ef96a02903, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AluminioPreto
+    second: {fileID: 2100000, guid: 56c48b597695f1442a3bba908bd290fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AluminioVerde
+    second: {fileID: 2100000, guid: e7a741b21f863a1429b66d0a103e680f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AluminioVerdeLateral
+    second: {fileID: 2100000, guid: 213f5280da9b1154385f5019d5d5942e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AluminioVermelho
+    second: {fileID: 2100000, guid: 864ad233cb01db24b89daa6902e5b079, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AluminioVermelhoLateral
+    second: {fileID: 2100000, guid: 3c7ac634cd115f749ae8c87e660d7360, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AluminioVermelhoLateral.001
+    second: {fileID: 2100000, guid: f0269e473836bab4db4144122baddcf2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cerveja
+    second: {fileID: 2100000, guid: 76b7177ebf3bf1945921fd8073d63f1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ExpositoraBudInf
+    second: {fileID: 2100000, guid: b67d588786dd2b140916865a3381ac69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ExpositoraBudTop
+    second: {fileID: 2100000, guid: 3b829e71c652e8b4b85b9fbf13467565, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Garrafa
+    second: {fileID: 2100000, guid: 722e469c538c3cd428018595fc3e8c9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GarrafaHeineken
+    second: {fileID: 2100000, guid: 132fb1b6a9bfef84ab85846b63c5d500, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HeinekenParteInf
+    second: {fileID: 2100000, guid: 26533102c28aea243a9b3a5e270d3a11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lampada.001
+    second: {fileID: 2100000, guid: 3d64d7b9ed5cc8042ac48b6a03ed46f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Led.001
+    second: {fileID: 2100000, guid: 242a2c6c435cadd4d856b65e6acf6ab7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LedBud
+    second: {fileID: 2100000, guid: 5fbf066dc4694dc4e871958059a1c93e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LedSkol
+    second: {fileID: 2100000, guid: f01b2ac24f42913409a21d63556e1866, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 963b687c969cda54e8d8b7d3ccc4dd4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticoBranco
+    second: {fileID: 2100000, guid: 1ee8c57cc3c768640821274a611b1b04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticoBranco.001
+    second: {fileID: 2100000, guid: a8100f43b37c1174baf48e7bd22f67f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "PlasticoBrancoBot\xE3o"
+    second: {fileID: 2100000, guid: a3654e26cc9c7bd4cb7033c1b3a5e512, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticoPreto
+    second: {fileID: 2100000, guid: 413da24905b066644b7ba798cdedb126, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rotulo_Bud
+    second: {fileID: 2100000, guid: 72ec9c4f6ad87c4418087f82d8add56c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rotulo_BudTop
+    second: {fileID: 2100000, guid: ce527467671676745a81c594d64a8ba2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rotulo_Heineken
+    second: {fileID: 2100000, guid: 07228813f3cadcf4a892e06aaf09faab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rotulo_HeinekenTop
+    second: {fileID: 2100000, guid: 859f423c430a2794391405b3c1f2dbb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rotulo_Skol
+    second: {fileID: 2100000, guid: 1ce9048d4a4599b499801663cb806b66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TamapHeineken
+    second: {fileID: 2100000, guid: 7084e66987f2d5f4e8416a26d4974193, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TampaBud
+    second: {fileID: 2100000, guid: 6f88a38411f08304b9a4024acd11cf01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TampaSkol
+    second: {fileID: 2100000, guid: 23fb2957757fe4d4e973c9281f04144d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vidro
+    second: {fileID: 2100000, guid: 216de375346060d468161fe0cf1a23d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vidro.001
+    second: {fileID: 2100000, guid: 62331252e0e09544f9b6816417fb896a, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

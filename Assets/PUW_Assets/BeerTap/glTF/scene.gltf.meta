@@ -1,0 +1,44 @@
+fileFormatVersion: 2
+guid: 872297b60eab79242b4f27b51434eb72
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\PUW_Assets\BeerTap\glTF\scene.bin
+    assetPath: Assets\PUW_Assets\BeerTap\glTF\scene.bin
+  - type: 1
+    originalUri: Assets\PUW_Assets\BeerTap\glTF\textures\BeerTap_baseColor.png
+    assetPath: Assets\PUW_Assets\BeerTap\glTF\textures\BeerTap_baseColor.png
+  - type: 1
+    originalUri: Assets\PUW_Assets\BeerTap\glTF\textures\BeerTap_metallicRoughness.png
+    assetPath: Assets\PUW_Assets\BeerTap\glTF\textures\BeerTap_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\PUW_Assets\BeerTap\glTF\textures\BeerTap_normal.png
+    assetPath: Assets\PUW_Assets\BeerTap\glTF\textures\BeerTap_normal.png
+  reportItems:
+  - type: 0
+    code: 8
+    messages:
+    - Cannot find resource at path Assets\PUW_Assets\BeerTap\glTF\scene.bin
+    - 0
