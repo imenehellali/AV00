@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class LSStats : MonoBehaviour
+public static class LSStats 
 {
 
     private static void CalculateCasesData(Case CH1, Case CH2, Case CH3, Case CH4, Case CA1, Case CA2, Case CA3, Case CA4)
@@ -80,7 +80,7 @@ public class LSStats : MonoBehaviour
 
         ParticipantSettings.Instance.LSDataPair.Invoke(new KeyValuePair<string, float>("ProgressOfSavingWithinAStrategy", avgOfSet(CH1!, CH2, CH3, CH4, CA1, CA2, CA3, CA4)));
     }
-    public static async Task<KeyValuePair<string, string>> FollowedStrategy(Dictionary<string, Case> VC)
+    public static async Task<KeyValuePair<string, string>> FollowedStrategy(Dictionary<string, Case> VC)  
     {
         var strategy = new StringBuilder();
         Case CH4; VC.TryGetValue("CH4", out CH4);
@@ -93,7 +93,7 @@ public class LSStats : MonoBehaviour
         Case CA2; VC.TryGetValue("CH4", out CA2);
         Case CA1; VC.TryGetValue("CH4", out CA1);
 
-        CalculateCasesData(CH1, CH2, CH3, CH4, CA1, CA2, CA3, CA4);
+        await Task.Run(() => CalculateCasesData(CH1, CH2, CH3, CH4, CA1, CA2, CA3, CA4));
 
         float avgHuman = avg(CH1, CH2, CH3, CH4);
         ParticipantSettings.Instance.LSDataPair.Invoke(new KeyValuePair<string, float>("AvgOfProgressOfHumanCases", avgHuman));

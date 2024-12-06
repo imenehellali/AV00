@@ -1,12 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
 
-[System.Serializable]
-public static class GBStats
+
+public static class GBStats 
 {
     // Quest 1 Variables
     private static float q1CorrectBustedGhosts = 0f;

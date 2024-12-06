@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[System.Serializable]
 public static class PUWStats 
 {
     private static int _coinsQuantity = 0;

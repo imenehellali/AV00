@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
 public class PUWData : MonoBehaviour
 {
     public static PUWData Data { get; private set; }

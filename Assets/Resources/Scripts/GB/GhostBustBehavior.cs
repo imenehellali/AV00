@@ -1,28 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.UI.Extensions.Tweens;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 public class GhostBustBehavior : MonoBehaviour
 {
     [SerializeField]
     private InputActionReference Activate;
     private ETObject GazeObject;
-    private GhostBehavior ghostBehavior;
     public string _in = "started";
     [SerializeField]
-    private Material _material;
+    private Renderer _material;
     private Vector4 _color;
+    [Header("Ghost Properties")]
+    public bool ghostDrunken;
+    public bool ghostRed;
+    public bool ghostDead;
 
-
-
-
+    //Movement Variables
+    private float radius = 3f;  // Radius of the movement circle
+    private float rotationSpeed = 30f;
     private void Start()
     {
         GazeObject=GetComponent<ETObject>();
-        ghostBehavior = GetComponent<GhostBehavior>();
         Activate.action.started += ShootGhost;
-        _color = _material.GetVector("_EmissionColor");
+        _material.enabled = false;
+        StartCoroutine(MoveAndDestroyGhost(this.transform,rotationSpeed));
+    }
+    private IEnumerator MoveAndDestroyGhost(Transform ghost, float rotationSpeed)
+    {
+        float circleDuration = 360f / rotationSpeed;
+        float _elapsedTime = 0f;
+        // Save the initial position of the ghost for circular movement
+        Vector3 initialPosition = ghost.position;
+        Quaternion initialRotation = ghost.rotation;
+
+        while (_elapsedTime < circleDuration)
+        {
+            _elapsedTime += Time.deltaTime;
+
+            // Rotate the ghost around its own forward axis
+            ghost.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+
+            // Move the ghost in a circular path in its own local forward direction
+            float angle = rotationSpeed * _elapsedTime;
+            Vector3 offset = new Vector3(Mathf.Cos(angle), 0f, Mathf.Sin(angle)) * radius;
+            ghost.position = initialPosition + ghost.forward * offset.magnitude;
+
+            // Ensure ghost stays in the upper hemisphere
+            ghost.position = new Vector3(ghost.position.x, Mathf.Clamp(ghost.position.y, 0f, 3f), ghost.position.z);
+
+            yield return null;
+        }
+        //remove from list and destroy if time elapsed but ghost still alive
+        if (_elapsedTime >= circleDuration)
+        {
+            Destroy(this.gameObject);
+        }
+       
     }
 
     private void OnDestroy()
@@ -34,16 +71,17 @@ public class GhostBustBehavior : MonoBehaviour
     {
         if (GazeObject.IsGazeLocked())
         {
-            ghostBehavior.ghostDead = true;
+            ghostDead = true;
+            GhostBusterManager.Instance.killedGhost.Invoke(this);
         }
     }
 
-    public void ResetColor()
+    public void ResetGlow()
     {
-        _material.SetVector("_EmissionColor",_color);
+        _material.enabled=false;
     }
-    public void GlowColor()
+    public void SetGlow()
     {
-        _material.SetVector("_EmissionColor", _color * Mathf.Lerp(0.5f, 2f, Time.deltaTime));
+        _material.enabled=true; 
     }
 }

@@ -104,6 +104,7 @@ public class LifeSaverManager : MonoBehaviour
         timeToStartUrgeny = levelDuration - 40f;
         InitCases();
         InitResources();
+        StartLevel();   
     }
     private void InitCases()
     {

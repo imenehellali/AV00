@@ -379,7 +379,7 @@ public class ParticipantSettings : MonoBehaviour
     //PUW Data generation
     public async Task<Dictionary<string, float>> GeneratePUWInputData()
     {
-        return NormalizePUWInputData(PUWdataDict);
+        return await Task.Run(()=> NormalizePUWInputData(PUWdataDict));
     }
 
     public static Dictionary<string, float> NormalizePUWInputData(Dictionary<string, float> inputData)
@@ -457,13 +457,11 @@ public class ParticipantSettings : MonoBehaviour
         return normalizedData;
     }
 
-
-
     //LS Data generation
 
     public async Task<Dictionary<string, float>> GenerateLSInputData()
     {
-        return NormalizeLSInputData(LSdataDict);
+        return await Task.Run(() => NormalizeLSInputData(LSdataDict));
     }
 
     public static Dictionary<string, float> NormalizeLSInputData(Dictionary<string, float> inputData)
@@ -559,7 +557,7 @@ public class ParticipantSettings : MonoBehaviour
 
     public async Task<Dictionary<string, float>> GenerateGBInputData()
     {
-        return NormalizeGBInputData(GBdataDict);
+        return await Task.Run(() => NormalizeGBInputData(GBdataDict));
     }
     public static Dictionary<string, float> NormalizeGBInputData(Dictionary<string, float> inputData)
     {
@@ -653,8 +651,19 @@ public class ParticipantSettings : MonoBehaviour
 
     public async Task<Dictionary<string, float>> GenerateTMInputData()
     {
-        return NormalizePUWInputData(TMdataDict);
+        return await Task.Run(() => NormalizePUWInputData(TMdataDict));
     }
 
+
+
+
+
+    public static float CalculateStandardDeviation(IEnumerable<float> values)
+    {
+        float mean = values.Average();
+        float sumOfSquaresOfDifferences = values.Select(val => (val - mean) * (val - mean)).Sum();
+        float stdDev = (float)Math.Sqrt(sumOfSquaresOfDifferences / values.Count());
+        return stdDev;
+    }
 
 }

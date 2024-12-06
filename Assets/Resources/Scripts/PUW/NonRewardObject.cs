@@ -13,7 +13,7 @@ public class NonRewardObject : ETObject
     private float timeThreshold = 1.0f; // 1 second threshold
 
     //error handling of pupil out of focus but then focus again
-    private float offsetTracking = 0.5f;  // Offset duration to avoid misTracking
+    private float offsetRewardTracking = 0.5f;  // Offset duration to avoid misTracking
     private float unfocusTimer = 0f;
     private bool isUnfocusTimerRunning = false;
     private void Update()
@@ -27,7 +27,7 @@ public class NonRewardObject : ETObject
         {
             unfocusTimer += Time.deltaTime;
 
-            if (unfocusTimer >= offsetTracking)
+            if (unfocusTimer >= offsetRewardTracking)
             {
                 isUnfocusTimerRunning = false;  // Offset timer reached, consider it truly unfocused
                 AddFocusDuration();
@@ -47,9 +47,8 @@ public class NonRewardObject : ETObject
             base.IsFocused();
             isTimerRunning = true;
         }
-        if (gameObject.GetComponent<GhostBehavior>() != null)
-            gameObject.GetComponent<GhostBustBehavior>().GlowColor(); 
-
+        if (gameObject.GetComponent<GhostBustBehavior>() != null)
+            gameObject.GetComponent<GhostBustBehavior>().SetGlow();
     }
 
     public override void UnFocused()
@@ -59,8 +58,8 @@ public class NonRewardObject : ETObject
         focusTime = 0f;
         unfocusTimer = 0f;
         isUnfocusTimerRunning = true;  // Start the offset timer
-        if (gameObject.GetComponent<GhostBehavior>() != null)
-            gameObject.GetComponent<GhostBustBehavior>().ResetColor();
+        if (gameObject.GetComponent<GhostBustBehavior>() != null)
+            gameObject.GetComponent<GhostBustBehavior>().ResetGlow();
     }
     private void AddFocusDuration()
     {

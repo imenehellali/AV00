@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityStandardAssets.Effects;
 
 public class GhostBusterManager : MonoBehaviour
@@ -17,8 +18,6 @@ public class GhostBusterManager : MonoBehaviour
 
 
     //Room Effects variables
-    private float _effectSwitchSpeed = 10f;
-    private float _soundSwitchSpeed = 10f;
     [Header("Room Effect Materials")]
     [SerializeField]
     private Color _greenEffectRoomMaterial;
@@ -55,17 +54,28 @@ public class GhostBusterManager : MonoBehaviour
     private const int _wrongActionCost = -20;
 
 
-    //Ghost Spawn Variable
+    //Ghost Variable
     private Vector3 _ghostSpawnWPos = Vector3.zero;
-    private List<GhostBehavior> ghosts = new List<GhostBehavior>();
+    public UnityAction<GhostBustBehavior> killedGhost;
+
     [Header("Ghosts Items")]
     [SerializeField]
     private List<GameObject> ghostsPref = new List<GameObject>();// _drunkenRedGhost;
     private float _ghostSpawnTO = 5f;
-    private float radius = 3f;  // Radius of the movement circle
 
+
+    public static  GhostBusterManager Instance { get; private set; }
     void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         AssignQTime();
     }
 
@@ -74,7 +84,20 @@ public class GhostBusterManager : MonoBehaviour
     {
         MoneyManager.ResetMoney();
     }
-
+    private void OnEnable()
+    {
+        killedGhost += Q1Ghostbusting;
+        killedGhost -= Q2Ghostbusting;
+        killedGhost += Q3Ghostbusting;
+        killedGhost -= Q4Ghostbusting;  
+    }
+    private void OnDisable()
+    {
+        killedGhost += Q1Ghostbusting;
+        killedGhost -= Q2Ghostbusting;
+        killedGhost += Q3Ghostbusting;
+        killedGhost -= Q4Ghostbusting;
+    }
     public void StartTask()
     {
         StartCoroutine(Q1());
@@ -104,6 +127,26 @@ public class GhostBusterManager : MonoBehaviour
         StartCoroutine(StartQ4());
     }
 
+
+    private void Q1Ghostbusting(GhostBustBehavior ghostBehavior)
+    {
+        if(ghostBehavior.ghostRed && ghostBehavior.ghostDead)
+        {
+            ghostBehavior.gameObject.GetComponent<GhostBustBehavior>()._in = "   Ouch Killed me";
+            audioSource.Stop();
+            audioSource.PlayOneShot(_correctActionClip);
+            MoneyManager.UpdateMoney(_correctActionCost);
+            Destroy(ghostBehavior.gameObject);
+        }
+        else 
+        {
+            ghostBehavior.gameObject.GetComponent<GhostBustBehavior>()._in = "   killed me wrong";
+            audioSource.Stop();
+            audioSource.PlayOneShot(_wrongActionClip);
+            MoneyManager.UpdateMoney(_wrongActionCost);
+            Destroy(ghostBehavior.gameObject);
+        }
+    }
     //Shoot the Red Ghost + room red
     private IEnumerator StartQ1()
     {
@@ -112,52 +155,6 @@ public class GhostBusterManager : MonoBehaviour
         while (_Q1Time > 0)
         {
             _Q1Time -= Time.deltaTime;
-            ghosts.ForEach(
-                x =>
-                {
-                    //If killed red
-                    if (x.ghostRed && x.ghostDead)
-                    {
-                        x.GetComponent<GhostBustBehavior>()._in = "   Ouch Killed me";
-                        audioSource.Stop();
-                        audioSource.PlayOneShot(_correctActionClip);
-                        MoneyManager.UpdateMoney(_correctActionCost);
-                        ghosts.Remove(x);
-                        Destroy(x.gameObject);
-                    }
-                    //if killed not red
-                    else if (!x.ghostRed && x.ghostDead)
-                    {
-                        x.GetComponent<GhostBustBehavior>()._in = "   killed me wrong";
-                        audioSource.Stop();
-                        audioSource.PlayOneShot(_wrongActionClip);
-                        MoneyManager.UpdateMoney(_wrongActionCost);
-                        ghosts.Remove(x);
-                        Destroy(x.gameObject);
-                    }
-                }
-                );
-            /*ghosts.RemoveAll(x=>
-            {
-                //If killed red
-                if(x.ghostRed && x.ghostDead)
-                {
-                    x.GetComponent<GhostBustBehavior>()._in = "   Ouch Killed me";
-                    audioSource.PlayOneShot(_correctActionClip);
-                    MoneyManager.UpdateMoney(_actionCost);
-                    return true;
-                }
-                //if killed not red
-                else if(!x.ghostRed && x.ghostDead)
-                {
-                    x.GetComponent<GhostBustBehavior>()._in = "   killed me wrong";
-                    audioSource.PlayOneShot(_wrongActionClip);
-                    MoneyManager.UpdateMoney(-_actionCost);
-                    return false;
-                }
-                //missed
-                return false;
-            });*/
             yield return null;
         }
         if (_Q1Time <= 0)
@@ -167,6 +164,26 @@ public class GhostBusterManager : MonoBehaviour
         }
 
     }
+
+    private void Q2Ghostbusting(GhostBustBehavior ghostBehavior)
+    {
+        if (!ghostBehavior.ghostRed && ghostBehavior.ghostDead)
+        {
+            ghostBehavior.gameObject.GetComponent<GhostBustBehavior>()._in = "   Ouch Killed me";
+            audioSource.Stop();
+            audioSource.PlayOneShot(_correctActionClip);
+            MoneyManager.UpdateMoney(_correctActionCost);
+            Destroy(ghostBehavior.gameObject);
+        }
+        else 
+        {
+            ghostBehavior.gameObject.GetComponent<GhostBustBehavior>()._in = "   killed me wrong";
+            audioSource.Stop();
+            audioSource.PlayOneShot(_wrongActionClip);
+            MoneyManager.UpdateMoney(_wrongActionCost);
+            Destroy(ghostBehavior.gameObject);
+        }
+    }
     //Shoot the blue ghost + room lit blue
     private IEnumerator StartQ2()
     {
@@ -175,39 +192,32 @@ public class GhostBusterManager : MonoBehaviour
         while (_Q2Time > 0)
         {
             _Q2Time -= Time.deltaTime;
-
-            ghosts.RemoveAll(x =>
-            {
-                //If killed drunken
-                if (!x.ghostRed && x.ghostDead)
-                {
-                    audioSource.Stop();
-                    audioSource.PlayOneShot(_correctActionClip);
-                    MoneyManager.UpdateMoney(_correctActionCost);
-                    //ghosts.Remove(x);
-                    //Destroy(x.gameObject);
-                    return true;
-                }
-                //if killed not drunken
-                else if (x.ghostRed && x.ghostDead)
-                {
-                    audioSource.Stop();
-                    audioSource.PlayOneShot(_correctActionClip);
-                    MoneyManager.UpdateMoney(_correctActionCost);
-                    //ghosts.Remove(x);
-                    //Destroy(x.gameObject);
-                    return false;
-                }
-                //missed
-                return false;
-            });
-
             yield return null;
         }
         if (_Q2Time <= 0)
         {
             StopAllCoroutines();
             StartCoroutine(Q3());
+        }
+    }
+
+    private void Q3Ghostbusting(GhostBustBehavior ghostBehavior)
+    {
+        if (!ghostBehavior.ghostDrunken && ghostBehavior.ghostDead)
+        {
+            ghostBehavior.gameObject.GetComponent<GhostBustBehavior>()._in = "   Ouch Killed me";
+            audioSource.Stop();
+            audioSource.PlayOneShot(_correctActionClip);
+            MoneyManager.UpdateMoney(_correctActionCost);
+            Destroy(ghostBehavior.gameObject);
+        }
+        else 
+        {
+            ghostBehavior.gameObject.GetComponent<GhostBustBehavior>()._in = "   killed me wrong";
+            audioSource.Stop();
+            audioSource.PlayOneShot(_wrongActionClip);
+            MoneyManager.UpdateMoney(_wrongActionCost);
+            Destroy(ghostBehavior.gameObject);
         }
     }
     //shoot sober ghost - flickering light with random interval - money sound randomly
@@ -220,31 +230,32 @@ public class GhostBusterManager : MonoBehaviour
         while (_Q3Time > 0)
         {
             _Q3Time -= Time.deltaTime;
-
-            ghosts.RemoveAll(x =>
-            {
-                //If killed sober
-                if (!x.ghostDrunken && x.ghostDead)
-                {
-                    MoneyManager.UpdateMoney(_correctActionCost);
-                    return true;
-                }
-                //if killed not sober
-                else if (x.ghostDrunken && x.ghostDead)
-                {
-                    MoneyManager.UpdateMoney(_wrongActionCost);
-                    return false;
-                }
-                //missed
-                return false;
-            });
-
             yield return null;
         }
         if (_Q3Time <= 0)
         {
             StopAllCoroutines();
             StartCoroutine(Q4());
+        }
+    }
+
+    private void Q4Ghostbusting(GhostBustBehavior ghostBehavior)
+    {
+        if (ghostBehavior.ghostDrunken && !ghostBehavior.ghostRed && ghostBehavior.ghostDead)
+        {
+            ghostBehavior.gameObject.GetComponent<GhostBustBehavior>()._in = "   Ouch Killed me";
+            audioSource.Stop();
+            audioSource.PlayOneShot(_correctActionClip);
+            MoneyManager.UpdateMoney(_correctActionCost);
+            Destroy(ghostBehavior.gameObject);
+        }
+        else
+        {
+            ghostBehavior.gameObject.GetComponent<GhostBustBehavior>()._in = "   killed me wrong";
+            audioSource.Stop();
+            audioSource.PlayOneShot(_wrongActionClip);
+            MoneyManager.UpdateMoney(_wrongActionCost);
+            Destroy(ghostBehavior.gameObject);
         }
     }
     //shoot green drunken ghost - flickering light with random interval - money sound randomly
@@ -257,24 +268,6 @@ public class GhostBusterManager : MonoBehaviour
         while (_Q4Time > 0)
         {
             _Q4Time -= Time.deltaTime;
-
-            ghosts.RemoveAll(x =>
-            {
-                //If killed drunken & green  
-                if (x.ghostDrunken && !x.ghostRed && x.ghostDead)
-                {
-                    MoneyManager.UpdateMoney(_correctActionCost);
-                    return true;
-                }
-                //if killed other
-                else if (x.ghostDead)
-                {
-                    MoneyManager.UpdateMoney(_wrongActionCost);
-                    return false;
-                }
-                //missed
-                return false;
-            });
             yield return null;
         }
         //Save all data here 
@@ -307,51 +300,11 @@ public class GhostBusterManager : MonoBehaviour
             _ghostSpawnWPos = Random.insideUnitSphere * 3f;
             _ghostSpawnWPos.y = Mathf.Clamp(_ghostSpawnWPos.y, 0f, 3f);
             int _rand = Random.Range(0, 6);
-            GhostBehavior _ghost = Instantiate(ghostsPref[_rand], _ghostSpawnWPos, Quaternion.identity).GetComponent<GhostBehavior>();
-            ghosts.Add(_ghost);
-            StartCoroutine(MoveAndDestroyGhost(_ghost.gameObject.transform, rotationSpeedQ));
+            GameObject _ghost = Instantiate(ghostsPref[_rand], _ghostSpawnWPos, Quaternion.identity);
             --currTime;
         }
     }
-    private IEnumerator MoveAndDestroyGhost(Transform ghost, float rotationSpeed)
-    {
-        float circleDuration = 360f / rotationSpeed;
-        float _elapsedTime = 0f;
-        // Save the initial position of the ghost for circular movement
-        Vector3 initialPosition = ghost.position;
-        Quaternion initialRotation = ghost.rotation;
-
-        while (_elapsedTime < circleDuration)
-        {
-            _elapsedTime += Time.deltaTime;
-
-            // Rotate the ghost around its own forward axis
-            ghost.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-
-            // Move the ghost in a circular path in its own local forward direction
-            float angle = rotationSpeed * _elapsedTime;
-            Vector3 offset = new Vector3(Mathf.Cos(angle), 0f, Mathf.Sin(angle)) * radius;
-            ghost.position = initialPosition + ghost.forward * offset.magnitude;
-
-            // Ensure ghost stays in the upper hemisphere
-            ghost.position = new Vector3(ghost.position.x, Mathf.Clamp(ghost.position.y, 0f, 3f), ghost.position.z);
-
-            yield return null;
-        }
-        //remove from list and destroy if time elapsed but ghost still alive
-        if (ghosts.Contains(ghost.gameObject.GetComponent<GhostBehavior>()) && _elapsedTime >= circleDuration)
-        {
-            ghosts.Remove(ghost.gameObject.GetComponent<GhostBehavior>());
-            Destroy(ghost.gameObject);
-        }
-        //remove from list and destroy if it was missed but killed ones --> doesn't give second chances
-        /*else if(ghosts.Contains(ghost.gameObject.GetComponent<GhostBehavior>()) && ghost.gameObject.GetComponent<GhostBehavior>().ghostDead)
-        {
-            ghosts.Remove(ghost.gameObject.GetComponent<GhostBehavior>());
-            Destroy(ghost.gameObject);
-        }*/
-    }
-
+    
     private IEnumerator SpawnRoomEffect(bool red)
     {
         _roomEffectMat.material.SetColor("_Color", red ? _redEffectRoomMaterial : _greenEffectRoomMaterial);

@@ -238,10 +238,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 571015549}
     m_Modifications:
-    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: df8930637a8655348944dbdb7efdffda, type: 2}
     - target: {fileID: 3132914354340559156, guid: 6e7bafe0100fed24d9c8b18ec3059904, type: 3}
       propertyPath: m_LocalScale.y
       value: 2.5
@@ -294,6 +290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: df8930637a8655348944dbdb7efdffda, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3249,7 +3249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99990064
+      value: -0.94146276
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3257,7 +3257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.014098033
+      value: -0.3371171
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3269,7 +3269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -1.616
+      value: -320.597
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -6303,10 +6303,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 252425831}
     m_Modifications:
-    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 50427cfe2bd6b934a9b794d199b4f467, type: 2}
     - target: {fileID: 3132914354340559156, guid: 6e7bafe0100fed24d9c8b18ec3059904, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -6367,6 +6363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50427cfe2bd6b934a9b794d199b4f467, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8848,10 +8848,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 571015549}
     m_Modifications:
-    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: df8930637a8655348944dbdb7efdffda, type: 2}
     - target: {fileID: 3132914354340559156, guid: 6e7bafe0100fed24d9c8b18ec3059904, type: 3}
       propertyPath: m_LocalScale.y
       value: 2.5
@@ -8904,6 +8900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: df8930637a8655348944dbdb7efdffda, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11527,10 +11527,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 252425831}
     m_Modifications:
-    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 50427cfe2bd6b934a9b794d199b4f467, type: 2}
     - target: {fileID: 3132914354340559156, guid: 6e7bafe0100fed24d9c8b18ec3059904, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -11591,6 +11587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50427cfe2bd6b934a9b794d199b4f467, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13980,11 +13980,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenFade: 1
-  eyeTracking: 1
+  eyeTracking: 0
   trackingMode: 0
   sharpeningMode: 0
   sharpeningEnhance: 0
-  faceTracking: 0
+  faceTracking: 1
   lipsyncTracking: 0
   lateLatching: 0
   latelatchingDebug: 0
@@ -14008,7 +14008,7 @@ MonoBehaviour:
   minEyeTextureScale: 0.7
   maxEyeTextureScale: 1.26
   enableSuperResolution: 0
-  useRecommendedAntiAliasingLevel: 1
+  useRecommendedAntiAliasingLevel: 0
 --- !u!43 &1455210199
 Mesh:
   m_ObjectHideFlags: 0
@@ -14519,10 +14519,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 571015549}
     m_Modifications:
-    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: df8930637a8655348944dbdb7efdffda, type: 2}
     - target: {fileID: 3132914354340559156, guid: 6e7bafe0100fed24d9c8b18ec3059904, type: 3}
       propertyPath: m_LocalScale.y
       value: 2.5
@@ -14575,6 +14571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: df8930637a8655348944dbdb7efdffda, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20392,10 +20392,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 571015549}
     m_Modifications:
-    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: df8930637a8655348944dbdb7efdffda, type: 2}
     - target: {fileID: 3132914354340559156, guid: 6e7bafe0100fed24d9c8b18ec3059904, type: 3}
       propertyPath: m_LocalScale.y
       value: 2.5
@@ -20448,6 +20444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 7022265961686803948, guid: 1d5bd5c37e773ec46a5f314077517d9e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: df8930637a8655348944dbdb7efdffda, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
