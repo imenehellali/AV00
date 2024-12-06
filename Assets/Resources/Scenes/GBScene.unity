@@ -1958,43 +1958,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da439d700c5821459e41cc442a1a279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: PUWData
-  ParticipantID: 
-  q1AvgReactionTimeToBustAnyGhost: 0
-  q1AvgReactionTimeToBustCorrectGhost: 0
-  q1AvgReactionTimeToBustWrongGhost: 0
-  q1AvgTimeGazeOnCorrectGhost: 0
-  q1AvgTimeGazeOnWrongGhost: 0
-  q1AvgNumberCorrectBustedGhosts: 0
-  q1AvgNumberWrongBusterGhosts: 0
-  q2AvgReactionTimeToBustAnyGhost: 0
-  q2AvgReactionTimeToBustCorrectGhost: 0
-  q2AvgReactionTimeToBustWrongGhost: 0
-  q2AvgTimeGazeOnCorrectGhost: 0
-  q2AvgTimeGazeOnWrongGhost: 0
-  q2AvgNumberCorrectBustedGhosts: 0
-  q2AvgNumberWrongBusterGhosts: 0
-  q12AvgReactionTimeToBustAnyGhost: 0
-  q12AvgReactionTimeToBustCorrectGhost: 0
-  q12AvgReactionTimeToBustWrongGhost: 0
-  q12AvgTimeGazeOnCorrectGhost: 0
-  q12AvgTimeGazeOnWrongGhost: 0
-  q3AvgTimeGazeOnCorrectGhost: 0
-  q3AvgTimeGazeOnWrongGhost: 0
-  incDecMarginReactionTimeAnyQ3To21: 0
-  incDecMarginReactionTimeCorrectQ3To21: 0
-  incDecMarginReactionTimeWrongQ3To21: 0
-  incDecMarginNumberBustAnyQ3To21: 0
-  incDecMarginNumberBustCorrectQ3To21: 0
-  incDecMarginNumberBustWrongQ3To21: 0
-  q4AvgTimeGazeOnCorrectGhost: 0
-  q4AvgTimeGazeOnWrongGhost: 0
-  incDecMarginReactionTimeAnyQ4To3: 0
-  incDecMarginReactionTimeCorrectQ4To3: 0
-  incDecMarginReactionTimeWrongQ4To3: 0
-  incDecMarginNumberBustAnyQ4To3: 0
-  incDecMarginNumberBustCorrectQ4To3: 0
-  incDecMarginNumberBustWrongQ4To3: 0
 --- !u!114 &1656614913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2466,7 +2429,7 @@ MonoBehaviour:
   foregroundLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  backLayerMask:
+  backgroundLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   backgroundCamObj: {fileID: 0}
